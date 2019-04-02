@@ -90,12 +90,32 @@ class UpdateProfile extends Component {
             />
 
             <label>Car</label>
+            <form>
+            <div className="form-check displayDiv">
+            <label className="displayDiv">
             <input
-              name="car"
-              type="boolean"
-              className="form-control"
-              onChange={this.handleChange}
+              type="radio"
+              name="react-tips"
+              value="Yes"
+              checked={true}
+              className="form-check-input"
             />
+            Yes
+            </label>
+            
+            <label className="displayDiv">
+            <input
+              type="radio"
+              name="react-tips"
+              value="No"
+              className="form-check-input"
+            />
+            No
+         </label>
+         </div>
+            </form>
+            
+            
 
              <label>Cost</label>
             <input

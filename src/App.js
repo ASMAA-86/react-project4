@@ -11,6 +11,7 @@ import UpdateProfile from "./components/UpdateProfile";
 class App extends Component {
   state = {
     user: null,
+    //was sign-in and it keep logout the user
     activePage: "home"
   };
   componentDidMount() {
@@ -60,6 +61,7 @@ class App extends Component {
           ) : (
             ""
           )}
+          
           {activePage === "profile" ? <Profile changeActivePage={this.changeActivePage}/> : ""}
           {activePage === "updateProfile" ? <UpdateProfile changeActivePage={this.changeActivePage}/> : ""}
         </div>
@@ -69,3 +71,7 @@ class App extends Component {
 }
 
 export default App;
+
+//send the component with changeActivePage={this.changeActivePage
+/*{activePage === "profile" ? <Profile changeActivePage={this.changeActivePage}/> : ""}
+{activePage === "updateProfile" ? <UpdateProfile*/
