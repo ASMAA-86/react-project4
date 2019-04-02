@@ -2,12 +2,17 @@ import React, { Component } from "react";
 import apiUrl from "../apiConfig";
 import { getUser } from "../services/AuthService";
 import TrainerInfo from "./TrainerInfo";
-
-
+import OneProfile from "./OneProfile";
 class Home extends Component {
     state = {
-        users: []
+        users: [],
+        activeTrainer: null 
     };
+
+
+    setActiveTrainer = activeTrainer => {
+        this.setState({ activeTrainer });
+      };
 
     componentDidMount(){
         let url = `${apiUrl}/api/users`;
@@ -32,11 +37,13 @@ class Home extends Component {
     }
     render(){
         const users = this.state.users.map(user => (
-            <TrainerInfo user={user} changeActivePage={this.props.changeActivePage} onSignout={this.props.onSignout}/>
+            <TrainerInfo user={user} onSignout={this.props.onSignout} setActiveTrainer={this.setActiveTrainer}/>
         ))
       return (
         <div>
-            {users}
+            { this.state.activeTrainer ?
+                 <OneProfile user={this.state.activeTrainer} setActiveTrainer={this.setActiveTrainer} /> :  
+                 users}
         </div>
       )
     }

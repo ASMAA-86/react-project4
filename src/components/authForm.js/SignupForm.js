@@ -89,12 +89,32 @@ class SignupForm extends Component {
               className="form-control"
               onChange={this.handleChange}
             />
-            <label>Car </label>
-            <input
-              name="car"
-              className="form-control"
-              onChange={this.handleChange}
-            />
+
+            <label>Car</label>
+           
+           <div className="form-check displayDiv">
+           <label className="displayDiv">
+           <input
+             type="radio"
+             name="react-tips"
+             value="Yes"
+             checked={true}
+             className="form-check-input"
+           />
+           Yes
+           </label>
+           
+           <label className="displayDiv">
+           <input
+             type="radio"
+             name="react-tips"
+             value="No"
+             className="form-check-input"
+           />
+           No
+        </label>
+        </div>
+        
             <label>Cost </label>
             <input
               name="cost"
@@ -103,6 +123,7 @@ class SignupForm extends Component {
             />
             <label>Avalable </label>
             <input
+            type="date"
               name="avalable"
               className="form-control"
               onChange={this.handleChange}

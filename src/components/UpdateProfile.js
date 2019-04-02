@@ -89,8 +89,9 @@ class UpdateProfile extends Component {
               onChange={this.handleChange}
             />
 
+           
             <label>Car</label>
-            <form>
+           
             <div className="form-check displayDiv">
             <label className="displayDiv">
             <input
@@ -113,7 +114,7 @@ class UpdateProfile extends Component {
             No
          </label>
          </div>
-            </form>
+          
             
             
 
