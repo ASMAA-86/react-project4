@@ -9,21 +9,42 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family:'Comfortaa', 'Century Gothic', Arial;
 }
 
+/*import flower from “../image/ppflorist-vert-3624.jpg”;
+<img src={flower}  alt=” Florist”/>*/
+
+
+
 .navImg{
+border-radius: 50%;
+border: 1px solid #ddd;
+width: 200px;
 height:200px;
-width:200px;
 }
 
 .navStyle{
-background-color: rosybrown;
+padding-top: 50px;
+padding-bottom: 50px;
+background-color: rgb(207, 205, 205);
 }
 
-.profileStyle{
-  border: 2px solid gray;
-  height:100px ;
-  width: 100px;
+.InfoContainer{
+  display: inline-block;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+.profileStyle{
+  border: 2px solid rgb(244, 240, 240);
+  height:200px ;
+  width: 200px;
+}
+
+.mainheader{
+background-color:  gray;
+height: 200px;
+width:auto;
+}
+

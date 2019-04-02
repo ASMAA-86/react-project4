@@ -8,7 +8,7 @@ class Home extends Component {
     state = {
         users: []
     };
-    
+
     componentDidMount(){
         let url = `${apiUrl}/api/users`;
         fetch(url, {
@@ -32,7 +32,7 @@ class Home extends Component {
     }
     render(){
         const users = this.state.users.map(user => (
-            <TrainerInfo user={user} />
+            <TrainerInfo user={user} changeActivePage={this.props.changeActivePage} onSignout={this.props.onSignout}/>
         ))
       return (
         <div>

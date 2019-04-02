@@ -1,5 +1,5 @@
 import React from "react";
-
+import img from "../img/saudi-driver2-last.png";
 const authenticatedOptions = (changeActivePage, onSignout) => (
   <React.Fragment>
     <li
@@ -11,6 +11,7 @@ const authenticatedOptions = (changeActivePage, onSignout) => (
     <li className="nav-item" onClick={() => onSignout()}>
       <div className="nav-link">Sign Out</div>
     </li>
+    <img className = "navImg" src={img}  alt="Driver"/>
   </React.Fragment>
 );
 
@@ -29,17 +30,21 @@ const unauthenticatedOptions = changeActivePage => (
 
 const alwaysOptions = changeActivePage => (
   <React.Fragment>
+    
     <li className="nav-item" onClick={() => changeActivePage("home")}>
       <div className="nav-link">Home</div>
     </li>
     <li className="nav-item" onClick={() => changeActivePage("home")}>
       <div className="nav-link">Trainer</div>
+      
     </li>
     
 
   </React.Fragment>
 
 );
+
+
 
 const Nav = ({ user, changeActivePage, onSignout }) => (
   <nav className="navbar navbar-expand-lg navStyle navbar-light  ">

@@ -125,7 +125,7 @@ class SignupForm extends Component {
           </div>
 
           <button type="submit" className="btn btn-primary">
-            Login
+            Signup
           </button>
         </form>
       </div>
