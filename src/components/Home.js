@@ -37,7 +37,10 @@ class Home extends Component {
     }
     render(){
         const users = this.state.users.map(user => (
-            <TrainerInfo user={user} onSignout={this.props.onSignout} setActiveTrainer={this.setActiveTrainer}/>
+            <TrainerInfo changeActivePage={this.props.changeActivePage} 
+                         user={user} 
+                         onSignout={this.props.onSignout} 
+                         setActiveTrainer={this.setActiveTrainer}/>
         ))
       return (
         <div>

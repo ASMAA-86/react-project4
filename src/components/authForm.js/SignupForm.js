@@ -11,7 +11,7 @@ class SignupForm extends Component {
       name: null,
       phone: null,
       address: null,
-      car: null,
+      car: true,
       cost: null,
       avalable: null
     },
@@ -21,7 +21,7 @@ class SignupForm extends Component {
   handleLoginRequest = user => {
     
     let url = `${apiUrl}/sign-up`;
-//fetch
+    console.log(user)
     fetch(url, {
       mode: "cors",
       credentials: "include",
@@ -96,9 +96,10 @@ class SignupForm extends Component {
            <label className="displayDiv">
            <input
              type="radio"
-             name="react-tips"
-             value="Yes"
-             checked={true}
+             name="car"
+             value="true"
+             defaultChecked
+             onChange={this.handleChange}
              className="form-check-input"
            />
            Yes
@@ -107,8 +108,9 @@ class SignupForm extends Component {
            <label className="displayDiv">
            <input
              type="radio"
-             name="react-tips"
-             value="No"
+             name="car"
+             value="false"
+             onChange={this.handleChange}
              className="form-check-input"
            />
            No

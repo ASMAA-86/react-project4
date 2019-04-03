@@ -53,3 +53,7 @@ width:auto;
 display: inline;
 padding: 15px;
 }
+
+.btninline{
+  display: inline-block;
+}

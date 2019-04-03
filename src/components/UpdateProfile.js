@@ -8,7 +8,7 @@ class UpdateProfile extends Component {
         name: "",
         phone:"" ,
         address: "",
-        car: "",
+        car: true,
         cost: "",
         avalable: "" 
     },
@@ -22,6 +22,7 @@ class UpdateProfile extends Component {
     let url = `${apiUrl}/user/${getUser().id}`;
     //test
    // console.log('new form data is ', user);
+   console.log(user)
     fetch(url, {
       method: "PATCH",
       mode: "cors",
@@ -96,10 +97,11 @@ class UpdateProfile extends Component {
             <label className="displayDiv">
             <input
               type="radio"
-              name="react-tips"
-              value="Yes"
-              checked={true}
+              name="car"
+              value="true"
+              defaultChecked
               className="form-check-input"
+              onChange={this.handleChange}
             />
             Yes
             </label>
@@ -107,9 +109,10 @@ class UpdateProfile extends Component {
             <label className="displayDiv">
             <input
               type="radio"
-              name="react-tips"
-              value="No"
+              name="car"
+              value="false"
               className="form-check-input"
+              onChange={this.handleChange}
             />
             No
          </label>
@@ -136,7 +139,7 @@ class UpdateProfile extends Component {
 
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary ">
             Submit
           </button>
         </form>

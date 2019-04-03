@@ -10,7 +10,7 @@ class OneProfile extends Component {
             <div>
             <p>Phone:{this.props.user.phone} </p>
             <p>Address:{this.props.user.address} </p>
-            <p>Car:{this.props.user.car} </p>
+            <p>Car:{`${this.props.user.car}`} </p>
             <p>Cost:{this.props.user.cost} </p>
             <p>Avalable:{this.props.user.avalable} </p>
             <button onClick={() => this.props.setActiveTrainer(null)}>back</button> 

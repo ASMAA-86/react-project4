@@ -11,7 +11,7 @@ const authenticatedOptions = (changeActivePage, onSignout) => (
     <li className="nav-item" onClick={() => onSignout()}>
       <div className="nav-link">Sign Out</div>
     </li>
-    <img className = "navImg" src={img}  alt="Driver"/>
+    
   </React.Fragment>
 );
 
@@ -33,10 +33,6 @@ const alwaysOptions = changeActivePage => (
     
     <li className="nav-item" onClick={() => changeActivePage("home")}>
       <div className="nav-link">Home</div>
-    </li>
-    <li className="nav-item" onClick={() => changeActivePage("home")}>
-      <div className="nav-link">Trainer</div>
-      
     </li>
     
 

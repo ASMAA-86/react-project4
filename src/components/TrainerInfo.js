@@ -14,7 +14,6 @@ class TrainerInfo extends Component {
       button = (
         <div>
           <button onClick={()=> this.props.changeActivePage('updateProfile')}>Edit</button>
-          
           <DeleteProfile changeActivePage={this.props.changeActivePage} onSignout={this.props.onSignout}/>
         </div>
       )
@@ -29,7 +28,7 @@ class TrainerInfo extends Component {
             <p>Name:{ this.props.user.name}</p>
             <p>Email:{this.props.user.email} </p>
             {button}
-            <button onClick={() => this.props.setActiveTrainer(this.props.user)}>more</button> 
+            <button  onClick={() => this.props.setActiveTrainer(this.props.user)}>more</button> 
 
             </div>
 
